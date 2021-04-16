@@ -1,0 +1,28 @@
+.loginMain {
+    background-image: url("../../images/login-bg.jpg");
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+    height: 700px;
+    width: auto;
+    align-content: center;
+    text-align: center;
+    justify-content: center;
+}
+.loginDiv {
+    background-color: transparent;
+    border: 1px solid black;
+    border-radius: 10px;
+    height: 250px;
+    width: 250px;
+    margin-top: 50px;
+    padding: 20px;
+}
+.error{
+    text-align: center;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: medium;
+    font-weight:bolder;
+    border-radius: 10px;
+    padding: 10px;
+}

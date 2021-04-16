@@ -1,0 +1,8 @@
+.top-Banner {
+    background-image: url("../../../images/home-bg-1.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* border: 20px solid #FF5; */
+    height: 500px;
+}
