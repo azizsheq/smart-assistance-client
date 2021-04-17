@@ -14,13 +14,13 @@ const DashboardMenu = () => {
                 <Link to="/dashboard/addReviews">
                     <li className="dashLI"><FontAwesomeIcon icon={faCommentAlt}/>&nbsp;REVIEW</li>
                 </Link>
-                <Link to="">
+                <Link to="/dashboard/addServices">
                     <li className="dashLI"><FontAwesomeIcon icon={faPlus}/>&nbsp;ADD SERVICES</li>
                 </Link>
-                <Link to="">
+                <Link to="/dashboard/manageUser">
                     <li className="dashLI"><FontAwesomeIcon icon={faUserCog}/>&nbsp;USER</li>
                 </Link>
-                <Link to="">
+                <Link to="/dashboard/manageServices">
                     <li className="dashLI"><FontAwesomeIcon icon={faEdit}/>&nbsp;MANAGE SERVICES</li>
                 </Link>
             </ul>

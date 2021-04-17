@@ -9,6 +9,9 @@ import Orders from './Orders/Orders';
 import NavBar from '../Home/Header/NavBar/NavBar';
 import DashboardMenu from './DashboardMenu/DashboardMenu';
 import AddReview from './AddReview/AddReview';
+import AddServices from './AddServices/AddServices';
+import ManageUser from './ManageUser/ManageUser';
+import ManageServices from './ManageServices/ManageServices';
 
 const Dashboard = () => {
     return (
@@ -26,6 +29,15 @@ const Dashboard = () => {
                             </Route>
                             <Route path="/dashboard/addReviews">
                                 <AddReview/>
+                            </Route>
+                            <Route path="/dashboard/addServices">
+                                <AddServices/>
+                            </Route>
+                            <Route path="/dashboard/manageUser">
+                                <ManageUser/>
+                            </Route>
+                            <Route path="/dashboard/manageServices">
+                                <ManageServices/>
                             </Route>
                         </Switch>
                     </div>
