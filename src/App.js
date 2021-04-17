@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import { createContext, useState } from 'react';
 import Home from './components/Home/Home';
 import NoMatch from './components/NoMatch/NoMatch';
+import Reviews from './components/Home/Reviews/Reviews';
 
 export const UserContext = createContext();
 
@@ -24,6 +25,9 @@ function App() {
           </Route>
           <Route path="/login">
             <Login />
+          </Route>
+          <Route path="/home/Reviews">
+            <Reviews/>
           </Route>
           <Route exact path="/">
             <Home />

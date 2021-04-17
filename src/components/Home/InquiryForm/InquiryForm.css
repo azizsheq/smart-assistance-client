@@ -1,0 +1,15 @@
+.inquirySection {
+    background-color: rgb(241, 241, 184);
+    border-radius: 10px;
+    padding: 20px;
+    padding-left: 70px;
+    padding-right: 70px;
+    margin-bottom: 50px;
+}
+.inquiryFormLabel {
+    text-align: center;
+    align-self: center;
+    justify-self: center;
+    color: #050;
+    font-size: large;
+}

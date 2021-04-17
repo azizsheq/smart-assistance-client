@@ -1,0 +1,23 @@
+.footerMain {
+    background-color: lightslategray;
+    height: 300px;
+    text-align: center;
+    padding: 50px;
+}
+.leftBorder {
+    border-left: 1px solid black;
+}
+/* Responsive */
+@media screen and (max-width: 600px) {
+    .footerMain {
+        background-color: lightslategray;
+        height: 600px;
+        width: 100%;
+        text-align: center;
+        padding: 30px;
+    }
+    .leftBorder {
+        border-top: 1px solid black;
+        border-left: 0px solid black;
+    }
+}

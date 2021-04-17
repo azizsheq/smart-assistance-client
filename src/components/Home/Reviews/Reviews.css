@@ -1,0 +1,10 @@
+.reviewDiv {
+    margin-bottom: 20px;
+}
+.reviewHeaderLabel {
+    text-align: center;
+    background-color: #FF5;
+    color: #050;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}

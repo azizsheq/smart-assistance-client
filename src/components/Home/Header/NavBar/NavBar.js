@@ -15,11 +15,23 @@ const NavBar = () => {
     return (
         <Navbar bg="" expand="lg">
             <img src={logo} alt="sa logo" style={{height: "40px", width: "40px"}}/>
-            <Navbar.Brand href="#home">Smart Assistance</Navbar.Brand>
+            <Navbar.Brand href="/home">Smart Assistance</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
                 <Nav className="mr-auto">
                     <Link className="nav-link" to="/home">Home</Link>
+                </Nav>
+                <Nav className="mr-auto">
+                    <Link className="nav-link" to="/home/Reviews">Reviews</Link>
+                </Nav>
+                <Nav className="mr-auto">
+                    <Link className="nav-link" to="/home">Projects</Link>
+                </Nav>
+                <Nav className="mr-auto">
+                    <Link className="nav-link" to="/home">Services</Link>
+                </Nav>
+                <Nav className="mr-auto">
+                    <Link className="nav-link" to="/home">Admin</Link>
                 </Nav>
                 <Nav>
                     {
