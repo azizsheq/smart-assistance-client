@@ -23,6 +23,7 @@ const Login = () => {
         newUser: false,
         name: '',
         email: '',
+        image: '',
         error: '',
         success: false
     });
@@ -47,11 +48,12 @@ const Login = () => {
                 // The signed-in user info.
                 var user = result.user;
                 // console.log(user);
-                const { displayName, email } = user;
+                const { displayName, email, photoURL } = user;
                 const signedInUser = {
                     isSignedIn: true,
                     name: displayName,
                     email: email,
+                    image: photoURL,
                     error: '',
                     success: true
                 }
@@ -74,7 +76,8 @@ const Login = () => {
                 const signedOutUser = {
                     isSignedIn: false,
                     name: '',
-                    email: ''
+                    email: '',
+                    image: ''
                 }
                 setUser(signedOutUser);
                 setLoggedInUser({});

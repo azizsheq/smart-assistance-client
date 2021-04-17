@@ -1,0 +1,15 @@
+.dashboardMainDiv {
+    height: 500px;
+}
+
+.dashNavDiv {
+    background-color: #FF5;
+    height: 500px;
+    padding-top: 10px;
+    text-align: center;
+}
+
+.dashCompDiv {
+    background-color: cadetblue;
+    height: 500px;
+}

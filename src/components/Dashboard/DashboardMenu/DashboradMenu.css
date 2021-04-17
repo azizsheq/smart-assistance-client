@@ -1,0 +1,26 @@
+.dashMenuDiv{
+
+}
+
+.dashUL {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.dashLI {
+    text-decoration: none;
+    color: #050;
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 20px;
+    font-weight: bold;
+    display: block;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.dashLI:hover {
+    background-color: #050;
+    color: #FF5;
+    border-radius: 10px;
+}
