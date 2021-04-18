@@ -31,7 +31,7 @@ const useOptions = () => {
 };
 
 
-const PaymentForm = () => {
+const PaymentForm = ({handlePayment}) => {
 
     const stripe = useStripe();
     const elements = useElements();
@@ -61,11 +61,11 @@ const PaymentForm = () => {
         } else {
             setPaymentSuccess(paymentMethod.id);
             setPaymentError(null);
-            // handlePayment(paymentMethod.id);
+            handlePayment(paymentMethod.id);
             // console.log('[PaymentMethod]', paymentMethod);
         }
 
-        console.log("[PaymentMethod]", error);
+        // console.log("[PaymentMethod]", error);
     };
 
     return (
@@ -147,8 +147,8 @@ const PaymentForm = () => {
                     paymentSuccess && <p style={{ color: "green" }}>Your payment was successful !</p>
                 }
             </div>
-            <div>
-                <p>Test Value</p>
+            <div style={{border: "1px solid white", borderRadius: "5px", fontSize: "12px"}}>
+                <p>Card Test Value</p>
                 <p>Card No : 4242 4242 4242 4242</p>
                 <p>Expiry Date : 12/25</p>
                 <p>CVC : 123</p>

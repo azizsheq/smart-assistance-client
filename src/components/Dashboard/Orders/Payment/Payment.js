@@ -9,11 +9,11 @@ const stripePromise = loadStripe(
 );
 
 
-const Payment = () => {
+const Payment = ({handlePayment}) => {
 
     return (
         <Elements stripe={stripePromise}>
-            <PaymentForm/>
+            <PaymentForm handlePayment={handlePayment}/>
         </Elements>
     );
 };

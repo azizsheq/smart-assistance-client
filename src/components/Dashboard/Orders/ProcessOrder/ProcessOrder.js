@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { Button } from 'react-bootstrap';
-import { useHistory, useParams } from 'react-router';
+import { useContext } from 'react';
+import { useParams } from 'react-router';
+import { UserContext } from '../../../../App';
+import Payment from '../Payment/Payment';
 
 const ProcessOrder = () => {
     
@@ -8,7 +10,7 @@ const ProcessOrder = () => {
 
     const [clickedService, setClickedService] = useState([]);
 
-    let history = useHistory();
+    const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
         const url = `http://localhost:5055/getService/${id}`;
@@ -17,25 +19,54 @@ const ProcessOrder = () => {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data);
+                // console.log(data);
                 setClickedService(data);
             })    
     },[])
 
-    const handleProceedPayment = () => {
-        history.push("/dashboard/payment");
+
+    const handlePaymentSuccess = paymentId => {
+
+        const orderDetails = {
+            ...loggedInUser,
+            ...clickedService,
+            paymentId
+        };
+
+        const url = `http://localhost:5055/addOrder`;
+        // fetch for sending new product data to server 
+        fetch(url, {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+            },
+            body: JSON.stringify(orderDetails),
+        })
+            .then(response => {
+                // console.log("Server side response: ", response);
+                if(response) {
+                    alert('Order Placement Successful !')
+                } 
+            })
+            .catch(error => {
+                console.error('Server side Error:', error);
+            });
     }
     
     return (
-        <div className="container mt-2">
-            <div className="card" style={{width: "18rem"}}>
-                <img src={clickedService.imageURL} className="card-img-top" alt="..."/>
-                <div className="card-body">
-                    <h5 className="card-title">{clickedService.name}</h5>
-                    <p className="card-text">{clickedService.description}</p>
-                    Minimum Charge <h3><span class="badge bg-info">${clickedService.price}</span></h3>
+        <div className="container mt-2 row">
+            <div className="col-md-6">
+                <div className="card" style={{width: "18rem"}}>
+                    <img src={clickedService.imageURL} className="card-img-top" alt="..."/>
+                    <div className="card-body">
+                        <h5 className="card-title">{clickedService.name}</h5>
+                        <p className="card-text">{clickedService.description}</p>
+                        Minimum Charge <h3><span class="badge bg-info">${clickedService.price}</span></h3>
+                    </div>
                 </div>
-                <Button onClick={handleProceedPayment}>Proceed for Payment</Button>
+            </div>
+            <div className="col-md-6">
+                <Payment handlePayment={handlePaymentSuccess}/>
             </div>
         </div>
     );

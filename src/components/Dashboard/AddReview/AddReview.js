@@ -20,7 +20,7 @@ const AddReview = () => {
     const handleReviewSubmit = (e) => {
         console.log(reviewData);
         const url = `http://localhost:5055/addReview`;
-        // fetch for sending new product data to server 
+        // fetch for sending new review data to server 
         fetch(url, {
             method: 'POST',
             headers: {

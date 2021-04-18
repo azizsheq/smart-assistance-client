@@ -101,7 +101,7 @@ const ManageServices = () => {
 
     return (
         <div>
-            <h4>Total available services({ }) are - </h4>
+            <h4>Total available services({services.length}) are - </h4>
             <Table striped bordered hover size="sm">
                 <thead>
                     <tr>

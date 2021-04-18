@@ -73,7 +73,8 @@ const Login = () => {
                 }
                 setUser(signedInUser);
                 setLoggedInUser(signedInUser);
-                setUserToken();
+                // setUserToken();
+                history.replace(from);  // sending to original location
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;
@@ -96,7 +97,7 @@ const Login = () => {
                 }
                 setUser(signedOutUser);
                 setLoggedInUser({});
-                sessionStorage.removeItem('token');
+                // sessionStorage.removeItem('token');
             }).catch((error) => {
                 // An error happened.
                 // console.log("Sign out error : ", error);
