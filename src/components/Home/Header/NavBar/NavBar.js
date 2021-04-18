@@ -14,7 +14,7 @@ const NavBar = () => {
 
     return (
         <Navbar bg="" expand="lg">
-            <img src={logo} alt="sa logo" style={{height: "40px", width: "40px"}}/>
+            {/* <img src={logo} alt="sa logo" style={{height: "40px", width: "40px"}}/> */}
             <Navbar.Brand href="/home">Smart Assistance</Navbar.Brand>
             <Navbar.Toggle aria-controls="basic-navbar-nav" />
             <Navbar.Collapse id="basic-navbar-nav">
