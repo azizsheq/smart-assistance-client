@@ -1,10 +1,10 @@
-# Project (Full Stack) : **My Easy Mart**
+# Project (Full Stack) : **SMART ASSISTANCE**
 
-## **Firebase Live Hosting URL** : https://my-easy-mart.web.app/
+## **Firebase Live Hosting URL** : https://smart-assistance-353ad.web.app/
 
-![project home page screenshot](https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq/blob/master/screenshots/mainHome.png)
+![project home page screenshot](https://github.com/Porgramming-Hero-web-course/complete-website-client-azizsheq/blob/master/screenshots/homePage.png)
 
-**GitHub Repositories Link** https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq
+**GitHub Repositories server side Link** https://github.com/Porgramming-Hero-web-course/complete-website-server-azizsheq
 
 
 ## Built with
@@ -20,13 +20,13 @@
 * React-Bootstrap
 
 
-![project home page responsive screenshot](https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq/blob/master/screenshots/productCheckout.png)
+![project home page responsive screenshot](https://github.com/Porgramming-Hero-web-course/complete-website-client-azizsheq/blob/master/screenshots/homePageResponsive.png)
 
 
 ## User Authentication developed with
 * Firebase Authentication
 
-![project home page responsive screenshot](https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq/blob/master/screenshots/mainHomeResponsive.png)
+![project home page responsive screenshot](https://github.com/Porgramming-Hero-web-course/complete-website-client-azizsheq/blob/master/screenshots/dashboardProcessOrder.png)
 
 
 ## Responsive Design and Necessary Form Validation
@@ -36,20 +36,11 @@ There are two responsiveness available
 * more than 600px
 
 
-![private routed user interface screenshot](https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq/blob/master/screenshots/adminManageProductResponsive.png)
-
-
 ### Additional information for icon
 * font-awesome is being used for the icon
 
 
-![private routed user interface screenshot](https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq/blob/master/screenshots/adminAddProductResponsive.png)
-
-
 ## MongoDB server deployed in HEROKU
-
-
-![private routed user interface screenshot](https://github.com/Porgramming-Hero-web-course/full-stack-client-azizsheq/blob/master/screenshots/displayOrders.png)
 
 
 ## Contact Information -
