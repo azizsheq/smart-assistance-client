@@ -12,6 +12,8 @@ import AddReview from './AddReview/AddReview';
 import AddServices from './AddServices/AddServices';
 import ManageUser from './ManageUser/ManageUser';
 import ManageServices from './ManageServices/ManageServices';
+import ProcessOrder from './Orders/ProcessOrder/ProcessOrder';
+import Payment from './Orders/Payment/Payment';
 
 const Dashboard = () => {
     return (
@@ -26,6 +28,12 @@ const Dashboard = () => {
                         <Switch>
                             <Route path="/dashboard/orders">
                                 <Orders/>
+                            </Route>
+                            <Route path="/dashboard/processOrder/:id">
+                                <ProcessOrder/>
+                            </Route>
+                            <Route path="/dashboard/payment">
+                                <Payment/>
                             </Route>
                             <Route path="/dashboard/addReviews">
                                 <AddReview/>

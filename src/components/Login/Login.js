@@ -35,7 +35,21 @@ const Login = () => {
     const location = useLocation();
     let { from } = location.state || { from: { pathname: "/" } };
 
+    function handleClickBackHome() {
+        history.push("/home");
+    }
 
+
+    //
+    const setUserToken = () => {
+        firebase.auth().currentUser.getIdToken(/* forceRefresh */ true).then(function(idToken) {
+            // Send token to your backend via HTTPS
+            sessionStorage.setItem('token', idToken);
+          }).catch(function(error) {
+            // Handle error
+          });
+    };
+    
     // to create an instance of the Google provider object
     const provider = new firebase.auth.GoogleAuthProvider();
 
@@ -59,6 +73,7 @@ const Login = () => {
                 }
                 setUser(signedInUser);
                 setLoggedInUser(signedInUser);
+                setUserToken();
             }).catch((error) => {
                 // Handle Errors here.
                 var errorCode = error.code;
@@ -81,6 +96,7 @@ const Login = () => {
                 }
                 setUser(signedOutUser);
                 setLoggedInUser({});
+                sessionStorage.removeItem('token');
             }).catch((error) => {
                 // An error happened.
                 // console.log("Sign out error : ", error);
@@ -116,7 +132,7 @@ const Login = () => {
                 }
                 <p></p>
 
-                <a href="/home">Back to Home</a>
+                <Button onClick={handleClickBackHome}>Back to Home</Button>
 
             </div>
 

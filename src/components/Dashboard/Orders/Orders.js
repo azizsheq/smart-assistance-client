@@ -1,11 +1,16 @@
 import React from 'react';
+// import ProcessOrder from './ProcessOrder/ProcessOrder';
+// import Payment from './Payment/Payment';
 
 const Orders = () => {
     return (
-        <div>
-            <h1>ORDERS</h1>
+        <div className="">
+            Your orders are here - 
+            {/* <ProcessOrder/> */}
+
+            {/* <Payment/> */}
         </div>
     );
 };
 
-export default Orders;<h1>ORDERS</h1>
+export default Orders;
