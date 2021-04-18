@@ -31,7 +31,7 @@ const ManageUser = () => {
                 </thead>
                 {
                     userData.map(user =>
-                        <tbody key={service._id}>
+                        <tbody key={user._id}>
                             <tr>
                                 <td>{user.name}</td>
                                 <td>{user.email}</td>
