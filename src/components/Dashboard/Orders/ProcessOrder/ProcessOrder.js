@@ -14,7 +14,7 @@ const ProcessOrder = () => {
 
     useEffect(() => {
         // const url = `http://localhost:5055/getService/${id}`;
-        const url = `https://calm-river-92849.herokuapp.com/${id}`;
+        const url = `https://calm-river-92849.herokuapp.com/getService/${id}`;
         console.log(url);
         // fetch for sending new service data to server 
         fetch(url)

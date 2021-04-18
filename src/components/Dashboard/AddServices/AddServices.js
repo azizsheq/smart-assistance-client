@@ -79,7 +79,8 @@ const AddServices = () => {
             setErrors(newErrors)
         } else {
             // console.log(formData);
-            const url = `http://localhost:5055/addService`;
+            // const url = `http://localhost:5055/addService`;
+            const url = `https://calm-river-92849.herokuapp.com/addService`;
 
             // fetch for sending new product data to server 
             fetch(url, {

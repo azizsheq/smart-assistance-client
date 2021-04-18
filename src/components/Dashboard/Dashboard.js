@@ -16,6 +16,7 @@ import ProcessOrder from './Orders/ProcessOrder/ProcessOrder';
 import Payment from './Orders/Payment/Payment';
 
 const Dashboard = () => {
+
     return (
         <div className="container dashboardMainDiv">
             <NavBar/>
@@ -26,6 +27,7 @@ const Dashboard = () => {
                     </div>
                     <div className="col-sm-9 dashCompDiv">
                         <Switch>
+
                             <Route path="/dashboard/orders">
                                 <Orders/>
                             </Route>
@@ -38,6 +40,7 @@ const Dashboard = () => {
                             <Route path="/dashboard/addReviews">
                                 <AddReview/>
                             </Route>
+
                             <Route path="/dashboard/addServices">
                                 <AddServices/>
                             </Route>
@@ -47,6 +50,7 @@ const Dashboard = () => {
                             <Route path="/dashboard/manageServices">
                                 <ManageServices/>
                             </Route>
+                            
                         </Switch>
                     </div>
                 </div>
