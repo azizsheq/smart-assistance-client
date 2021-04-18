@@ -7,7 +7,8 @@ const Services = () => {
     const [services, setServices] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5055/getServices`;
+        // const url = `http://localhost:5055/getServices`;
+        const url = `https://calm-river-92849.herokuapp.com/getServices`;
         fetch(url)
             .then(res => res.json())
             .then(data => {

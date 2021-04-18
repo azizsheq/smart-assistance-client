@@ -19,7 +19,8 @@ const AddReview = () => {
 
     const handleReviewSubmit = (e) => {
         console.log(reviewData);
-        const url = `http://localhost:5055/addReview`;
+        // const url = `http://localhost:5055/addReview`;
+        const url = `https://calm-river-92849.herokuapp.com/addReview`;
         // fetch for sending new review data to server 
         fetch(url, {
             method: 'POST',

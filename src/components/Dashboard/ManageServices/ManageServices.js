@@ -27,7 +27,8 @@ const ManageServices = () => {
     // loadServices();
 
     useEffect(() => {
-        const url = `http://localhost:5055/getServices`;
+        // const url = `http://localhost:5055/getServices`;
+        const url = `https://calm-river-92849.herokuapp.com/getServices`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
@@ -40,7 +41,8 @@ const ManageServices = () => {
 
 
     const deleteService = (id) => {
-        const url = `http://localhost:5055/deleteService/${id}`;
+        // const url = `http://localhost:5055/deleteService/${id}`;
+        const url = `https://calm-river-92849.herokuapp.com/deleteService/${id}`;
         // console.log(url);
 
         // fetch for sending new service data to server 
@@ -59,7 +61,8 @@ const ManageServices = () => {
 
 
     const handleUpdateForm = (id) => {
-        const url = `http://localhost:5055/getService/${id}`;
+        // const url = `http://localhost:5055/getService/${id}`;
+        const url = `https://calm-river-92849.herokuapp.com/getService/${id}`;
         // fetch for sending new service data to server 
         fetch(url)
             .then(res => res.json())
@@ -82,7 +85,8 @@ const ManageServices = () => {
     const handleServiceUpdate = (id) => {
         // console.log(updatedService);
 
-        const url = `http://localhost:5055/updateService/${id}`;
+        // const url = `http://localhost:5055/updateService/${id}`;
+        const url = `https://calm-river-92849.herokuapp.com/updateService/${id}`;
         fetch(url, {
             method: 'PATCH',
             headers:  {'Content-Type': 'application/json'},

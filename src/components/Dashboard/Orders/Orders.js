@@ -12,7 +12,8 @@ const Orders = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        const url = `http://localhost:5055/getOrders?email=`+loggedInUser.email;
+        // const url = `http://localhost:5055/getOrders?email=`+loggedInUser.email;
+        const url = `https://calm-river-92849.herokuapp.com/getOrders?email=`+loggedInUser.email;
         fetch(url)
             .then(res => res.json())
             .then(data => {

@@ -13,7 +13,8 @@ const ProcessOrder = () => {
     const [loggedInUser, setLoggedInUser] = useContext(UserContext);
 
     useEffect(() => {
-        const url = `http://localhost:5055/getService/${id}`;
+        // const url = `http://localhost:5055/getService/${id}`;
+        const url = `https://calm-river-92849.herokuapp.com/${id}`;
         console.log(url);
         // fetch for sending new service data to server 
         fetch(url)
@@ -33,7 +34,8 @@ const ProcessOrder = () => {
             paymentId
         };
 
-        const url = `http://localhost:5055/addOrder`;
+        // const url = `http://localhost:5055/addOrder`;
+        const url = `https://calm-river-92849.herokuapp.com/addOrder`;
         // fetch for sending new product data to server 
         fetch(url, {
             method: 'POST',

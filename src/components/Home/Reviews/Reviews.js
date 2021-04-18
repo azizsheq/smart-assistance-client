@@ -9,7 +9,8 @@ const Reviews = () => {
     const [reviews, setReviews] = useState([]);
 
     useEffect(() => {
-        const url = `http://localhost:5055/getReviews`;
+        // const url = `http://localhost:5055/getReviews`;
+        const url = `https://calm-river-92849.herokuapp.com/getReviews`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
