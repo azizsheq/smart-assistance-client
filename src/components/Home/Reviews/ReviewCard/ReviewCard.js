@@ -2,7 +2,7 @@ import React from 'react';
 import './ReviewCard.css'
 
 const ReviewCard = ({review}) => {
-    const {name, text, image} = review;
+    const {name, reviewText, image} = review;
     return (
         <div className="col text-center">
             <div className="card h-70">
@@ -11,7 +11,7 @@ const ReviewCard = ({review}) => {
                 </div>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
-                    <p className="card-text">"{text}"</p>
+                    <p className="card-text">"{reviewText}"</p>
                 </div>
             </div>
         </div>

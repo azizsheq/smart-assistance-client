@@ -1,39 +1,22 @@
 import React from 'react';
 import './Reviews.css'
-import client1 from '../../../images/client-1.jpg';
-import client2 from '../../../images/client-2.jpg';
-import client3 from '../../../images/client-3.jpg';
-import client4 from '../../../images/client-4.jpg';
 import ReviewCard from './ReviewCard/ReviewCard';
-
-const reviewData = [
-    {
-        id : 1,
-        name : "Rose",
-        text : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        image : client1
-    },
-    {
-        id : 2,
-        name : "Jack",
-        text : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        image : client2
-    },
-    {
-        id : 3,
-        name : "Eric",
-        text : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        image : client3
-    },
-    {
-        id : 4,
-        name : "Nairobi",
-        text : "Lorem ipsum dolor sit amet consectetur adipisicing elit.",
-        image : client4
-    }
-];
+import { useState } from 'react';
+import { useEffect } from 'react';
 
 const Reviews = () => {
+
+    const [reviews, setReviews] = useState([]);
+
+    useEffect(() => {
+        const url = `http://localhost:5055/getReviews`;
+        fetch(url)
+            .then(res => res.json())
+            .then(data => {
+                // console.log(data);
+                setReviews(data)
+            })       
+    },[])
     return (
         <div className="container reviewDiv">
             <div className="reviewHeaderLabel">
@@ -41,7 +24,7 @@ const Reviews = () => {
             </div>
             <div className="row row-cols-1 row-cols-md-4 g-4">
                 {
-                    reviewData.map(review => <ReviewCard review={review} key={review.id}/>)
+                    reviews.map(review => <ReviewCard review={review} key={review._id}/>)
                 }
             </div>
         </div>
